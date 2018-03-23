@@ -1,0 +1,121 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #ABCFDB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+	margin: 0;
+	color: black;
+}
+
+form {
+    margin: 0 auto;
+}
+
+input, textarea {
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    box-shadow: 3px 3px 5px #555;
+	opacity: .7;
+	transition: opacity 0.4s ease-in-out, background-color 0.4s ease-in-out;
+	color: black;
+}
+
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder, ::-ms-input-placeholder { /* Microsoft Edge */
+	color: grey;
+}
+
+input[type="button"] {
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+}
+
+input:invalid {
+	background-color: #FFBDBD;
+}
+
+input:hover, input:active {
+	opacity: 1;
+}
+
+textarea.paste {
+	margin-bottom: 10px;
+    width: 333px;
+	resize: none;
+	height: 49px;
+	transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+
+textarea.paste.extended {
+	width: 70vw;
+	height: calc(100vh - 200px);
+}
+
+img.paste {
+	box-sizing: border-box;
+	max-height: calc(100vh - 200px);
+    box-shadow: 3px 3px 5px #555;
+    background-color: white;
+	display: block;
+	margin: 0 auto;
+}
+
+.custom, .random {
+	position: absolute;
+	width: 160px;
+	transition: width 0.4s ease-in-out;
+}
+
+.custom {
+	left: 0;
+}
+
+.random {
+	right: 0;
+}
+
+#expand {
+	position: relative;
+	width: 333px;
+	transition: max-height 0.5s ease-in-out 0s,opacity 0.5s ease-in-out 0s;
+	margin: 0 auto;
+	height: 75px;
+}
+
+.image {
+	display: block;
+	margin: 0 auto;
+	background-color: white;
+    box-shadow: 3px 3px 5px #555;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh - 20px);
+}
+
+code {
+	font-family: 'Inconsolata', monospace;
+	white-space: pre-wrap;
+	display: block;
+	margin: 0 auto;
+	background-color: white;
+    box-shadow: 3px 3px 5px #555;
+	max-width: calc(100vw - 20px);
+	max-height: calc(100vh - 20px);
+}
+
+code.paste {
+	width: 70vw;
+	height: calc(100vh - 200px);
+    padding: 10px 20px;
+	overflow: auto;
+}
