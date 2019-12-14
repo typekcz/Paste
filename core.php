@@ -26,12 +26,12 @@ $re_url = "%^((?:(?:https?|ftp|teamspeak|skype|mailto|callto|apt|magnet|view-sou
 $short = "";
 
 function getNewId(){
-	if(file_put_contents("diskSpaceTest", "0123456789ABCDEF") == 0){
+	/*if(file_put_contents("diskSpaceTest", "0123456789ABCDEF") == 0){
 		$json_response["error"] = 5;
-		$json_response["message"] = "Bohužel není místo na disku. Pipni.cz není schopné zajistit tolik místa na disku kolik bych měl mít, takže to zkus později až někdo smaže ten recept na palačinky.";
+		$json_response["message"] = "Bohužel není místo na disku.";
 		die(json_encode($json_response));
 	}
-	unlink("diskSpaceTest");
+	unlink("diskSpaceTest");*/
 
 	$idfile = fopen("id", "r");
 	$id = fread($idfile, filesize("id"));

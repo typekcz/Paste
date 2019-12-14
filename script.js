@@ -3,6 +3,30 @@ var $paste = document.getElementsByName("paste")[0];
 var pastedBlob = null;
 //$paste.pattern = re_weburl.source;
 
+var $fileselect = document.getElementsByName("fileselect")[0];
+var $upload = document.getElementById("upload");
+$upload.onclick = function(){
+	$fileselect.click();
+}
+$fileselect.onchange = function(){
+	if ($fileselect.files[0].type.indexOf("image") === 0) {
+		pastedBlob = $fileselect.files[0];
+		var reader = new FileReader();
+		reader.onload = function(event){
+			var pastedImg = document.createElement("IMG");
+			pastedImg.src = event.target.result;
+			pastedImg.className = "paste";
+			$paste.parentNode.insertBefore(pastedImg, $paste);
+			$paste.parentNode.removeChild($paste);
+			$paste = pastedImg;
+			
+			$expand.expand();
+		};
+		reader.readAsDataURL(pastedBlob);
+	}
+}
+
+
 var $random = document.getElementsByName("random")[0];
 $random.waveOffset = 0;
 $random.asciiWave = function(){
@@ -146,6 +170,7 @@ var $expand = document.getElementById("expand");
 $expand.expand = function(){
 	this.style.overflow = "unset";
 	this.style.maxHeight = "66px";
+	$upload.style.display = "none";
 	setTimeout(function(){
 		$expand.style.opacity = "1";
 	},500);

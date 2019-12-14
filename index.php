@@ -13,8 +13,11 @@
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 	</head>
 	<body>
-		<form onsubmit="formsubmit(); return false;">
-			<textarea name="paste" class="paste" autocomplete="off" autofocus placeholder="Vlož URL, text nebo obrázek."></textarea><br>
+		<input type="file" name="fileselect" hidden>
+		<form onsubmit="formsubmit(); return false;" style="position: relative;">
+			<textarea name="paste" class="paste" autocomplete="off" autofocus placeholder="Vlož URL, text nebo obrázek."></textarea>
+			<img id="upload" src="cloud-upload.svg" alt="Upload" title="Select file">
+			<br>
 			<div id="expand" style="overflow: hidden; max-height: 0px; opacity: 0;">
 				<label>Jaký chcete název zkrácené adresy?</label><br>
 				<input name="custom" type="button" class="custom" autocomplete="off" value="Vlastní"><input name="random" type="button" class="random" value="Náhodná">

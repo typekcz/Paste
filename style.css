@@ -51,7 +51,7 @@ input:hover, input:active {
 
 textarea.paste {
 	margin-bottom: 10px;
-    width: 333px;
+    width: 360px;
 	resize: none;
 	height: 49px;
 	transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
@@ -73,7 +73,7 @@ img.paste {
 
 .custom, .random {
 	position: absolute;
-	width: 160px;
+	width: 173px;
 	transition: width 0.4s ease-in-out;
 }
 
@@ -87,7 +87,7 @@ img.paste {
 
 #expand {
 	position: relative;
-	width: 333px;
+	width: 360px;
 	transition: max-height 0.5s ease-in-out 0s,opacity 0.5s ease-in-out 0s;
 	margin: 0 auto;
 	height: 75px;
@@ -118,4 +118,13 @@ code.paste {
 	height: calc(100vh - 200px);
     padding: 10px 20px;
 	overflow: auto;
+}
+
+#upload {
+	width: 28px;
+	position: absolute;
+	top: 0;
+	right: 0px;
+	padding: 13px;
+	display: block;
 }
